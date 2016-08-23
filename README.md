@@ -1,0 +1,2 @@
+# parking-manager-system
+Sistema que tem como função efetuar o controle e gerenciamento de um estacionamento de veículo. Este projeto abordará os seguintes temas: Padrões de Projeto, Serialização de dados com arquivos. A linguagem de programação utilizada será Java. Projeto desenvolvido para o componente curricular Programação II, do curso de Ciências da Computação, Fundação Universitária de Blumenau - FURB 
