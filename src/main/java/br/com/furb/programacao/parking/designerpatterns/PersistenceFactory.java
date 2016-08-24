@@ -11,7 +11,11 @@ import br.com.furb.programacao.parking.dao.ReservaDAO;
 import br.com.furb.programacao.parking.dao.VagaDAO;
 import br.com.furb.programacao.parking.dao.VeiculoDAO;
 import br.com.furb.programacao.parking.exceptions.NotImplementationException;
+import br.com.furb.programacao.parking.model.Cliente;
 import br.com.furb.programacao.parking.model.Entidade;
+import br.com.furb.programacao.parking.model.Reserva;
+import br.com.furb.programacao.parking.model.Vaga;
+import br.com.furb.programacao.parking.model.Veiculo;
 
 /**
  *
@@ -19,16 +23,24 @@ import br.com.furb.programacao.parking.model.Entidade;
  */
 public class PersistenceFactory {
 
-    public static Persistence<? extends Entidade> getFactory(Class<?> klasse) throws NotImplementationException{
-        if(klasse == ClienteDAO.class)
-            return new ClienteDAO();
-        if(klasse == ReservaDAO.class)
-            return new ReservaDAO();
-        if(klasse == VagaDAO.class)
-            return new VagaDAO();
-        if(klasse == VeiculoDAO.class)
-            return new VeiculoDAO();
-        throw  new NotImplementationException("Unidade de persistência não está definida.");
+    public static <T extends Entidade> Persistence<T> getFactory(Class<T> kclasse) {
+        try {
+            if (kclasse == Cliente.class) {
+                return (Persistence<T>) new ClienteDAO();
+            }
+            if (kclasse == Reserva.class) {
+                return (Persistence<T>) new ReservaDAO();
+            }
+            if (kclasse == Vaga.class) {
+                return (Persistence<T>) new VagaDAO();
+            }
+            if (kclasse == Veiculo.class) {
+                return (Persistence<T>) new VeiculoDAO();
+            }
+            throw new NotImplementationException("Unidade de persistência não está definida.");
+        } catch (NotImplementationException notImplementationException) {
+            return null;
+        }
     }
-    
+
 }

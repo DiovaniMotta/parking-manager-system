@@ -24,36 +24,38 @@ public class EntidadeSingleton {
     private static Reserva reserva = null;
     private static Vaga vaga = null;
     private static Veiculo veiculo = null;
-    
-    
-    public static Cliente getCliente(TipoCliente tipoCliente){
-        if(cliente == null){
+
+    public static Cliente getCliente(TipoCliente tipoCliente) {
+        if (cliente == null) {
             ClienteCreate clienteCreate = new ClienteFactory(tipoCliente);
-            try{
-            cliente = clienteCreate.create(tipoCliente);
-            }catch(NotImplementationException nie){
-                nie.printStackTrace();
+            try {
+                cliente = clienteCreate.create(tipoCliente);
+            } catch (NotImplementationException nie) {
+               nie.printStackTrace();
             }
             return cliente;
         }
         return cliente;
     }
-    
-    public static Reserva getReserva(){
-        if(reserva == null)
+
+    public static Reserva getReserva() {
+        if (reserva == null) {
             reserva = new Reserva();
-        return reserva; 
+        }
+        return reserva;
     }
-    
-    public static Vaga getVaga(){
-        if(vaga == null)
+
+    public static Vaga getVaga() {
+        if (vaga == null) {
             vaga = new Vaga();
+        }
         return vaga;
     }
-    
-    public static Veiculo getVeiculo(){
-        if(veiculo == null)
+
+    public static Veiculo getVeiculo() {
+        if (veiculo == null) {
             veiculo = new Veiculo();
+        }
         return veiculo;
     }
 }
