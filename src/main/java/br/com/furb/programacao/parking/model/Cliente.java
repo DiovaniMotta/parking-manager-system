@@ -15,10 +15,7 @@ import java.util.Objects;
  */
 public abstract class Cliente extends Entidade{
     
-    protected Character tipo;
     protected String nome;
-    protected String cpf;
-    protected String rg;
     protected String endereco;
     protected String cnh;
     protected String telefone;
@@ -32,12 +29,9 @@ public abstract class Cliente extends Entidade{
         super(ID, ativo);
     }
 
-    public Cliente(Character tipo, String nome, String cpf, String rg, String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, String ID, Ativo ativo) {
+    public Cliente(String nome,String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, String ID, Ativo ativo) {
         super(ID, ativo);
-        this.tipo = tipo;
         this.nome = nome;
-        this.cpf = cpf;
-        this.rg = rg;
         this.endereco = endereco;
         this.cnh = cnh;
         this.telefone = telefone;
@@ -49,36 +43,12 @@ public abstract class Cliente extends Entidade{
     
     public abstract String getDocumento();
 
-    public Character getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(Character tipo) {
-        this.tipo = tipo;
-    }
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
     }
 
     public String getEndereco() {
@@ -124,10 +94,7 @@ public abstract class Cliente extends Entidade{
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 59 * hash + Objects.hashCode(this.tipo);
         hash = 59 * hash + Objects.hashCode(this.nome);
-        hash = 59 * hash + Objects.hashCode(this.cpf);
-        hash = 59 * hash + Objects.hashCode(this.rg);
         hash = 59 * hash + Objects.hashCode(this.endereco);
         hash = 59 * hash + Objects.hashCode(this.cnh);
         hash = 59 * hash + Objects.hashCode(this.telefone);
@@ -151,12 +118,6 @@ public abstract class Cliente extends Entidade{
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
-        if (!Objects.equals(this.cpf, other.cpf)) {
-            return false;
-        }
-        if (!Objects.equals(this.rg, other.rg)) {
-            return false;
-        }
         if (!Objects.equals(this.endereco, other.endereco)) {
             return false;
         }
@@ -169,9 +130,6 @@ public abstract class Cliente extends Entidade{
         if (!Objects.equals(this.celular, other.celular)) {
             return false;
         }
-        if (!Objects.equals(this.tipo, other.tipo)) {
-            return false;
-        }
         if (!Objects.equals(this.reservas, other.reservas)) {
             return false;
         }
@@ -180,6 +138,6 @@ public abstract class Cliente extends Entidade{
 
     @Override
     public String toString() {
-        return "Cliente{" + "tipo=" + tipo + ", nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", endereco=" + endereco + ", cnh=" + cnh + ", telefone=" + telefone + ", celular=" + celular + ", reservas=" + reservas + '}';
+        return "Cliente{nome=" + nome + ", endereco=" + endereco + ", cnh=" + cnh + ", telefone=" + telefone + ", celular=" + celular + ", reservas=" + reservas + '}';
     }
 }

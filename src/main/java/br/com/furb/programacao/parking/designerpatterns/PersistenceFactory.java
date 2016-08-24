@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.furb.programacao.parking.factory;
+package br.com.furb.programacao.parking.designerpatterns;
 
 import br.com.furb.programacao.parking.dao.ClienteDAO;
 import br.com.furb.programacao.parking.dao.Persistence;
