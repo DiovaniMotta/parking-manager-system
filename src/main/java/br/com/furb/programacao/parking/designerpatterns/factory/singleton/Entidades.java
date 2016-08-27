@@ -18,7 +18,7 @@ import br.com.furb.programacao.parking.model.enumerator.TipoCliente;
  *
  * @author Diovani
  */
-public class EntidadeSingleton {
+public class Entidades {
 
     private static Cliente cliente = null;
     private static Reserva reserva = null;

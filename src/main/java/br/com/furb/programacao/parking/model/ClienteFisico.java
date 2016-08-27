@@ -5,6 +5,8 @@
  */
 package br.com.furb.programacao.parking.model;
 
+import br.com.furb.programacao.parking.model.enumerator.Ativo;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -14,6 +16,17 @@ import java.util.Objects;
 public class ClienteFisico extends Cliente{
     
     private String cpf;
+
+    public ClienteFisico() {
+    }
+
+    public ClienteFisico(String ID, Ativo ativo) {
+        super(ID, ativo);
+    }
+
+    public ClienteFisico(String nome, String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, String ID, Ativo ativo) {
+        super(nome, endereco, cnh, telefone, celular, reservas, ID, ativo);
+    }
 
     @Override
     public void setDocumento(String documento) {
