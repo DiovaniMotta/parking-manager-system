@@ -5,11 +5,7 @@
  */
 package br.com.furb.programacao.parking.factory;
 
-import br.com.furb.programacao.parking.dao.ClienteDAO;
 import br.com.furb.programacao.parking.dao.Persistence;
-import br.com.furb.programacao.parking.dao.ReservaDAO;
-import br.com.furb.programacao.parking.dao.VagaDAO;
-import br.com.furb.programacao.parking.dao.VeiculoDAO;
 import br.com.furb.programacao.parking.exceptions.NotImplementationException;
 import br.com.furb.programacao.parking.model.Entidade;
 
@@ -17,18 +13,29 @@ import br.com.furb.programacao.parking.model.Entidade;
  *
  * @author Diovani
  */
-public class PersistenceFactory {
+public abstract class PersistenceFactory {
 
-    public static Persistence<? extends Entidade> getFactory(Class<?> klasse) throws NotImplementationException{
-        if(klasse == ClienteDAO.class)
-            return new ClienteDAO();
-        if(klasse == ReservaDAO.class)
-            return new ReservaDAO();
-        if(klasse == VagaDAO.class)
-            return new VagaDAO();
-        if(klasse == VeiculoDAO.class)
-            return new VeiculoDAO();
-        throw  new NotImplementationException("Unidade de persistência não está definida.");
+    public enum TypePersistence{
+        CLIENTE,
+        RESERVA,
+        VAGA,
+        VEICULO,
     }
     
+    public static PersistenceFactory getFactory(TypePersistence typePersistence) throws NotImplementationException {
+        switch(typePersistence){
+            case CLIENTE:
+                return new ClienteFactory();
+            case RESERVA:
+                return new ReservaFactory();
+            case VAGA:
+                return new VagaFactory();
+            case VEICULO:
+                return new VeiculoFactory();
+            default:
+                throw new NotImplementationException("Unidade de persistência não está definida.");
+        }
+    }
+
+    public abstract Persistence<? extends Entidade> openSessionFactory();
 }
