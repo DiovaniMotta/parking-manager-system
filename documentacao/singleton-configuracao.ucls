@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.1.10" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+<class-diagram version="1.1.10" icons="true" automaticImage="PNG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
   <class id="1" language="java" name="br.com.furb.programacao.parking.model.Configuracao" 
     project="parking-manager-system" 
     file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/Configuracao.java" binary="false" 
@@ -17,7 +18,9 @@
       <attribute id="3" name="CONFIGURACAO">        
         <position height="18" width="91" x="290" y="264"/>      
       </attribute>      
-      <multiplicity id="4" minimum="0" maximum="1"/>    
+      <multiplicity id="4" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  

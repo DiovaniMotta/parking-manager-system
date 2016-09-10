@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.1.10" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+<class-diagram version="1.1.10" icons="true" automaticImage="PNG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
   <class id="1" language="java" 
     name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.ClienteAbstractFactoryFisico" 
     project="parking-manager-system" 
@@ -81,7 +82,7 @@
     </display>  
   </enumeration>  
   <generalization id="8">    
-    <end type="SOURCE" refId="3"/>    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="4"/>  
   </generalization>  
   <generalization id="9">    
@@ -89,7 +90,7 @@
     <end type="TARGET" refId="2"/>  
   </generalization>  
   <generalization id="10">    
-    <end type="SOURCE" refId="6"/>    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="4"/>  
   </generalization>  
   <generalization id="11">    
