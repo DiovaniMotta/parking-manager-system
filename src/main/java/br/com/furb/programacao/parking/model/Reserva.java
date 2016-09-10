@@ -16,7 +16,11 @@ import java.util.Objects;
  */
 public class Reserva extends Entidade{
     
-    private Cliente cliente;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -3913891271253964374L;
+	private Cliente cliente;
     private Vaga vaga;
     private Veiculo veiculo;
     private String placa;

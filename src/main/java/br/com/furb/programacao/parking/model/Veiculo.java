@@ -14,7 +14,11 @@ import java.util.Objects;
  */
 public class Veiculo extends Entidade{
     
-    private Integer codigo;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6924404662807929201L;
+	private Integer codigo;
     private String descricao;
     private String marcar;
     private String modelo;

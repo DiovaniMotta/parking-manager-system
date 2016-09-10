@@ -15,7 +15,7 @@ import br.com.furb.programacao.parking.model.enumerator.TipoCliente;
  *
  * @author Diovani
  */
-public class ClienteFactory extends ClienteCreate{
+public class ClienteFactory extends ClienteCreate {
 
     public ClienteFactory(TipoCliente tipoCliente) {
         super(tipoCliente);
@@ -23,10 +23,12 @@ public class ClienteFactory extends ClienteCreate{
 
     @Override
     public Cliente create(TipoCliente tipoCliente) throws NotImplementationException {
-        if(tipoCliente == TipoCliente.FISICO)
+        if (tipoCliente == TipoCliente.FISICO) {
             return new ClienteFisico();
-        if(tipoCliente == TipoCliente.JURIDICO)
+        }
+        if (tipoCliente == TipoCliente.JURIDICO) {
             return new ClienteJuridico();
+        }
         throw new NotImplementationException("Tipo de Cliente Não Implementado...");
     }
 }

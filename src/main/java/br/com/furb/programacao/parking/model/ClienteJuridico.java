@@ -16,7 +16,11 @@ import java.util.Objects;
 public class ClienteJuridico extends Cliente{
 
  
-    private String cnpj;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 648362989506747872L;
+	private String cnpj;
 
     public ClienteJuridico() {
     }

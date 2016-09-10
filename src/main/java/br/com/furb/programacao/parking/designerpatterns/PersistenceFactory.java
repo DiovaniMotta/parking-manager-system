@@ -23,8 +23,7 @@ import br.com.furb.programacao.parking.model.Veiculo;
  */
 public class PersistenceFactory {
 
-    public static <T extends Entidade> Persistence<T> getFactory(Class<T> kclasse) {
-        try {
+    public static <T extends Entidade> Persistence<T> getFactory(Class<T> kclasse) throws NotImplementationException {
             if (kclasse == Cliente.class) {
                 return (Persistence<T>) new ClienteDAO();
             }
@@ -38,9 +37,5 @@ public class PersistenceFactory {
                 return (Persistence<T>) new VeiculoDAO();
             }
             throw new NotImplementationException("Unidade de persistência não está definida.");
-        } catch (NotImplementationException notImplementationException) {
-            return null;
-        }
     }
-
 }

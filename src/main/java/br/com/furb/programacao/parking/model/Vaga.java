@@ -14,7 +14,11 @@ import java.util.Objects;
  */
 public class Vaga extends Entidade{
     
-    private Integer codigo;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -2474249896156859055L;
+	private Integer codigo;
     private Integer numeroVaga;
     private String referencia;
 

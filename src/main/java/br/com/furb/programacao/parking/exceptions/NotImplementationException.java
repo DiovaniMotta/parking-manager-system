@@ -7,7 +7,12 @@ package br.com.furb.programacao.parking.exceptions;
 
 public class NotImplementationException extends Exception{
 
-    public NotImplementationException() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 2995113293869538016L;
+
+	public NotImplementationException() {
     }
 
     public NotImplementationException(String message) {

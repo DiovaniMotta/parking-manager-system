@@ -15,13 +15,17 @@ import java.util.Objects;
  */
 public abstract class Cliente extends Entidade{
     
-    protected String nome;
+    /**
+	 * 
+	 */
+	protected String nome;
     protected String endereco;
     protected String cnh;
     protected String telefone;
     protected String celular;
     protected List<Reserva> reservas;
-
+    private static final long serialVersionUID = 6748700199342308464L;
+	
     public Cliente() {
     }
 

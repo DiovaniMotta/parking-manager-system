@@ -15,7 +15,11 @@ import java.util.Objects;
  */
 public abstract class Entidade implements Serializable{
     
-    protected String ID;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6398540556483263675L;
+	protected String ID;
     protected Ativo ativo;
 
     public Entidade() {

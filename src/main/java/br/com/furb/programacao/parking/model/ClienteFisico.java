@@ -15,8 +15,12 @@ import java.util.Objects;
  */
 public class ClienteFisico extends Cliente{
     
-    private String cpf;
-
+    /**
+	 * 
+	 */
+	private String cpf;
+	private static final long serialVersionUID = 2070256036465299460L;
+	
     public ClienteFisico() {
     }
 

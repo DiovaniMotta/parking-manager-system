@@ -5,11 +5,11 @@
  */
 package br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory;
 
+import java.util.ArrayList;
+
 import br.com.furb.programacao.parking.model.Cliente;
 import br.com.furb.programacao.parking.model.ClienteFisico;
-import br.com.furb.programacao.parking.model.Reserva;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
-import java.util.ArrayList;
 
 /**
  *
