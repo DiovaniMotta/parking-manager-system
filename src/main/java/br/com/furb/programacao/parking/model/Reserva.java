@@ -7,6 +7,8 @@ package br.com.furb.programacao.parking.model;
 
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
 import br.com.furb.programacao.parking.model.enumerator.Situacao;
+import br.com.furb.programacao.parking.model.placas.Placa;
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -23,7 +25,7 @@ public class Reserva extends Entidade{
 	private Cliente cliente;
     private Vaga vaga;
     private Veiculo veiculo;
-    private String placa;
+    private Placa placa;
     private String cor;
     private String observacao;
     private Situacao situacao;
@@ -42,7 +44,7 @@ public class Reserva extends Entidade{
         super(ID, ativo);
     }
 
-    public Reserva(Cliente cliente, Vaga vaga, Veiculo veiculo, String placa, String cor, String observacao, Situacao situacao, Date horarioinicio, Date horariofinal, Date dataEntrada, Date dateSaida, Double valorHora, Double totalhoras, Double totalReserva, String ID, Ativo ativo) {
+    public Reserva(Cliente cliente, Vaga vaga, Veiculo veiculo, Placa placa, String cor, String observacao, Situacao situacao, Date horarioinicio, Date horariofinal, Date dataEntrada, Date dateSaida, Double valorHora, Double totalhoras, Double totalReserva, String ID, Ativo ativo) {
         super(ID, ativo);
         this.cliente = cliente;
         this.vaga = vaga;
@@ -84,11 +86,11 @@ public class Reserva extends Entidade{
         this.veiculo = veiculo;
     }
 
-    public String getPlaca() {
+    public Placa getPlaca() {
         return placa;
     }
 
-    public void setPlaca(String placa) {
+    public void setPlaca(Placa placa) {
         this.placa = placa;
     }
 

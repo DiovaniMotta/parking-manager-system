@@ -18,6 +18,7 @@ public class Configuracao extends Entidade implements Serializable{
 	 */
 	private static final long serialVersionUID = 1089720707928394570L;
 	private Boolean validarDocumento;
+	private String formatPlacaRegiao;
     private static final Configuracao CONFIGURACAO = new Configuracao();
     
     private Configuracao(){
@@ -35,4 +36,12 @@ public class Configuracao extends Entidade implements Serializable{
     public void setValidarDocumento(Boolean validarDocumento) {
         this.validarDocumento = validarDocumento;
     }
+
+	public String getFormatPlacaRegiao() {
+		return formatPlacaRegiao;
+	}
+
+	public void setFormatPlacaRegiao(String formatPlacaRegiao) {
+		this.formatPlacaRegiao = formatPlacaRegiao;
+	}
 }
