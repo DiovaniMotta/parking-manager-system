@@ -16,7 +16,10 @@ import br.com.furb.programacao.parking.model.enumerator.TipoCliente;
  */
 public abstract class ClienteAbstractFactory {
 
-    
+	///public static TipoCliente  tipoCliente;
+	
+	
+	
     public static ClienteAbstractFactory create(TipoCliente tipoCliente) throws NotImplementationException{
         switch(tipoCliente){
             case FISICO:

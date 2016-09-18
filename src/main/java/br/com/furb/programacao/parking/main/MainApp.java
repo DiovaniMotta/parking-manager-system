@@ -5,9 +5,11 @@
  */
 package br.com.furb.programacao.parking.main;
 
+import br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.ClienteAbstractFactory;
 import br.com.furb.programacao.parking.exceptions.NotImplementationException;
-import br.com.furb.programacao.parking.model.placas.Placa;
-import br.com.furb.programacao.parking.model.placas.PlacaVeiculo;
+import br.com.furb.programacao.parking.model.Cliente;
+import br.com.furb.programacao.parking.model.enumerator.Ativo;
+import br.com.furb.programacao.parking.model.enumerator.TipoCliente;
 
 /**
  *
@@ -17,8 +19,9 @@ public class MainApp {
 
 	public static void main(String[] args) throws NotImplementationException {
 		try {
-			Placa placa = new PlacaVeiculo();
-			placa.add("MH-9001-AA");
+			ClienteAbstractFactory abstractFactory = ClienteAbstractFactory.create(TipoCliente.FISICO);
+			Cliente cliente = abstractFactory.getCliente("Diovani Bernardi da Motta", "Rua X","110110100101","919191991","1111","1",Ativo.SIM);
+			System.out.println(cliente.toString());
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}

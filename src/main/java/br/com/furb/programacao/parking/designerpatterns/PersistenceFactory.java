@@ -22,8 +22,10 @@ import br.com.furb.programacao.parking.model.Veiculo;
  * @author Diovani
  */
 public class PersistenceFactory {
+	
 
-    public static <T extends Entidade> Persistence<T> getFactory(Class<T> kclasse) throws NotImplementationException {
+    @SuppressWarnings("unchecked")
+	public static <T extends Entidade> Persistence<T> getFactory(Class<T> kclasse) throws NotImplementationException {
             if (kclasse == Cliente.class) {
                 return (Persistence<T>) new ClienteDAO();
             }
