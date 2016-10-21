@@ -15,10 +15,15 @@ import br.com.furb.programacao.parking.model.enumerator.Ativo;
  *
  * @author Diovani
  */
-public class ClienteAbstractFactoryFisico extends ClienteAbstractFactory{
+public class ClienteAbstractFactoryFisico extends ClienteAbstractFactory {
 
-    @Override
-    public Cliente getCliente(String nome, String endereco, String cnh, String telefone, String celular, String ID, Ativo ativo) {
-        return new ClienteFisico(nome, endereco, cnh, telefone, celular,new ArrayList<>(), ID, ativo);
-    }
+	@Override
+	public Cliente getCliente(String nome, String endereco, String cnh, String telefone, String celular, String ID,
+			Ativo ativo) {
+		try {
+			return new ClienteFisico(nome, endereco, cnh, telefone, celular, new ArrayList<>(), ID, ativo);
+		} catch (Exception exception) {
+			return null;
+		}
+	}
 }

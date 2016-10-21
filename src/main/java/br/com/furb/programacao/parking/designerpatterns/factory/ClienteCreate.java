@@ -26,7 +26,8 @@ public abstract class ClienteCreate {
     public abstract Cliente create(TipoCliente tipoCliente) throws NotImplementationException;
 
     public void put(Ativo ativo, String celular, String cnh, String cpf, String documento, String Endereco, String nome, String telefone, String endereco) throws NotImplementationException {
-        Cliente cliente = create(tipoCliente);
+       try{
+    	Cliente cliente = create(tipoCliente);
         cliente.setAtivo(ativo);
         cliente.setCelular(celular);
         cliente.setCnh(cnh);
@@ -34,6 +35,8 @@ public abstract class ClienteCreate {
         cliente.setEndereco(endereco);
         cliente.setNome(nome);
         cliente.setTelefone(telefone);
-    }
-
+       }catch(Exception exception){
+    	   exception.printStackTrace();
+       }
+       }
 }

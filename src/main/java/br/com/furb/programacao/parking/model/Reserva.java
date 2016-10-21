@@ -5,6 +5,7 @@
  */
 package br.com.furb.programacao.parking.model;
 
+import br.com.furb.programacao.parking.exceptions.ValidatePropertyException;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
 import br.com.furb.programacao.parking.model.enumerator.Situacao;
 import br.com.furb.programacao.parking.model.placas.Placa;
@@ -44,7 +45,7 @@ public class Reserva extends Entidade{
         super(ID, ativo);
     }
 
-    public Reserva(Cliente cliente, Vaga vaga, Veiculo veiculo, Placa placa, String cor, String observacao, Situacao situacao, Date horarioinicio, Date horariofinal, Date dataEntrada, Date dateSaida, Double valorHora, Double totalhoras, Double totalReserva, String ID, Ativo ativo) {
+    public Reserva(Cliente cliente, Vaga vaga, Veiculo veiculo, Placa placa, String cor, String observacao, Situacao situacao, Date horarioinicio, Date horariofinal, Date dataEntrada, Date dateSaida, Double valorHora, Double totalhoras, Double totalReserva, String ID, Ativo ativo) throws ValidatePropertyException {
         super(ID, ativo);
         setCliente(cliente);
         setVaga(vaga);
@@ -66,32 +67,40 @@ public class Reserva extends Entidade{
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(Cliente cliente) throws ValidatePropertyException {
+        if(cliente == null)
+        	throw new ValidatePropertyException("O cliente deve ser informado.");
+    	this.cliente = cliente;
     }
 
     public Vaga getVaga() {
         return vaga;
     }
 
-    public void setVaga(Vaga vaga) {
-        this.vaga = vaga;
+    public void setVaga(Vaga vaga) throws ValidatePropertyException {
+      if(vaga == null)
+          	throw new ValidatePropertyException("A vaga deve ser informado.");
+      this.vaga = vaga;
     }
 
     public Veiculo getVeiculo() {
         return veiculo;
     }
 
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
+    public void setVeiculo(Veiculo veiculo) throws ValidatePropertyException {
+    	if(veiculo == null)
+          	throw new ValidatePropertyException("O veiculo deve ser informado.");
+    	this.veiculo = veiculo;
     }
 
     public Placa getPlaca() {
         return placa;
     }
 
-    public void setPlaca(Placa placa) {
-        this.placa = placa;
+    public void setPlaca(Placa placa) throws ValidatePropertyException {
+    	if(placa == null)
+          	throw new ValidatePropertyException("A placa deve ser informado.");
+    	this.placa = placa;
     }
 
     public String getCor() {
