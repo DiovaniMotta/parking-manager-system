@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Diovani
  */
-public class VeiculoDAO implements Persistence<Veiculo>{
+public class VeiculoDAO extends GenericDAO<Veiculo>{
 
     @Override
     public boolean save(Veiculo entidade) {

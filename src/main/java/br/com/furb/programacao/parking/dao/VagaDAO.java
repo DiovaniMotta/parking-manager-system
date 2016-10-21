@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Diovani
  */
-public class VagaDAO implements Persistence<Vaga>{
+public class VagaDAO extends GenericDAO<Vaga>{
 
     @Override
     public boolean save(Vaga entidade) {

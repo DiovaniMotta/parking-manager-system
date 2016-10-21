@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Diovani
  */
-public class ReservaDAO implements Persistence<Reserva>{
+public class ReservaDAO extends GenericDAO<Reserva>{
 
     @Override
     public boolean save(Reserva entidade) {

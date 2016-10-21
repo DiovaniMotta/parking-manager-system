@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Diovani
  */
-public class ClienteDAO implements Persistence<Cliente>{
+public class ClienteDAO extends GenericDAO<Cliente>{
 
     @Override
     public boolean save(Cliente entidade) {
