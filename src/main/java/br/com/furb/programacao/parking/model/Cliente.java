@@ -35,12 +35,12 @@ public abstract class Cliente extends Entidade{
 
     public Cliente(String nome,String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, String ID, Ativo ativo) {
         super(ID, ativo);
-        this.nome = nome;
-        this.endereco = endereco;
-        this.cnh = cnh;
-        this.telefone = telefone;
-        this.celular = celular;
-        this.reservas = reservas;
+        setNome(nome);
+        setEndereco(endereco);
+        setCnh(cnh);
+        setTelefone(telefone);
+        setCelular(celular);
+        setReservas(reservas);
     }
 
     public abstract void setDocumento(String documento);

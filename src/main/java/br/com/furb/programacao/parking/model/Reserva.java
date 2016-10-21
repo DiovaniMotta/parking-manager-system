@@ -46,20 +46,20 @@ public class Reserva extends Entidade{
 
     public Reserva(Cliente cliente, Vaga vaga, Veiculo veiculo, Placa placa, String cor, String observacao, Situacao situacao, Date horarioinicio, Date horariofinal, Date dataEntrada, Date dateSaida, Double valorHora, Double totalhoras, Double totalReserva, String ID, Ativo ativo) {
         super(ID, ativo);
-        this.cliente = cliente;
-        this.vaga = vaga;
-        this.veiculo = veiculo;
-        this.placa = placa;
-        this.cor = cor;
-        this.observacao = observacao;
-        this.situacao = situacao;
-        this.horarioinicio = horarioinicio;
-        this.horariofinal = horariofinal;
-        this.dataEntrada = dataEntrada;
-        this.dateSaida = dateSaida;
-        this.valorHora = valorHora;
-        this.totalhoras = totalhoras;
-        this.totalReserva = totalReserva;
+        setCliente(cliente);
+        setVaga(vaga);
+        setVeiculo(veiculo);
+        setPlaca(placa);
+        setCor(cor);
+        setObservacao(observacao);
+        setSituacao(situacao);
+        setHorarioinicio(horarioinicio);
+        setHorariofinal(horariofinal);
+        setDataEntrada(dataEntrada);
+        setDateSaida(dateSaida);
+        setValorHora(valorHora);
+        setTotalhoras(totalhoras);
+        setTotalReserva(totalReserva);
     }
 
     public Cliente getCliente() {

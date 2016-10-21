@@ -30,9 +30,9 @@ public class Vaga extends Entidade{
     }
 
     public Vaga(Integer codigo, Integer numeroVaga, String referencia) {
-        this.codigo = codigo;
-        this.numeroVaga = numeroVaga;
-        this.referencia = referencia;
+        setCodigo(codigo);
+    	setNumeroVaga(numeroVaga);
+        setReferencia(referencia);
     }
 
     public Integer getCodigo() {

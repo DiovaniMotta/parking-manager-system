@@ -31,10 +31,10 @@ public class Veiculo extends Entidade{
     }
 
     public Veiculo(Integer codigo, String descricao, String marcar, String modelo) {
-        this.codigo = codigo;
-        this.descricao = descricao;
-        this.marcar = marcar;
-        this.modelo = modelo;
+        setCodigo(codigo);
+        setDescricao(descricao);
+    	setMarcar(marcar);
+        setModelo(modelo);
     }
 
     public Integer getCodigo() {

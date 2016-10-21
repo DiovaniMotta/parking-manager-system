@@ -26,8 +26,8 @@ public abstract class Entidade implements Serializable{
     }
 
     public Entidade(String ID, Ativo ativo) {
-        this.ID = ID;
-        this.ativo = ativo;
+        setID(ID);
+        setAtivo(ativo);
     }
 
     public String getID() {
