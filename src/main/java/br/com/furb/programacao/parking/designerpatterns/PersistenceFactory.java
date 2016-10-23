@@ -5,39 +5,39 @@
  */
 package br.com.furb.programacao.parking.designerpatterns;
 
-import br.com.furb.programacao.parking.dao.ClienteDAO;
+import java.io.IOException;
+
 import br.com.furb.programacao.parking.dao.Persistence;
-import br.com.furb.programacao.parking.dao.ReservaDAO;
-import br.com.furb.programacao.parking.dao.VagaDAO;
-import br.com.furb.programacao.parking.dao.VeiculoDAO;
-import br.com.furb.programacao.parking.exceptions.NotImplementationException;
-import br.com.furb.programacao.parking.model.Cliente;
+import br.com.furb.programacao.parking.exceptions.ValidatePropertyException;
 import br.com.furb.programacao.parking.model.Entidade;
-import br.com.furb.programacao.parking.model.Reserva;
-import br.com.furb.programacao.parking.model.Vaga;
-import br.com.furb.programacao.parking.model.Veiculo;
+import br.com.furb.programacao.parking.model.enumerator.Persistencia;
 
 /**
  *
  * @author Diovani
  */
-public class PersistenceFactory {
-	
+public abstract class PersistenceFactory {
 
-    @SuppressWarnings("unchecked")
-	public static <T extends Entidade> Persistence<T> getFactory(Class<T> kclasse) throws NotImplementationException {
-            if (kclasse == Cliente.class) {
-                return (Persistence<T>) new ClienteDAO();
-            }
-            if (kclasse == Reserva.class) {
-                return (Persistence<T>) new ReservaDAO();
-            }
-            if (kclasse == Vaga.class) {
-                return (Persistence<T>) new VagaDAO();
-            }
-            if (kclasse == Veiculo.class) {
-                return (Persistence<T>) new VeiculoDAO();
-            }
-            throw new NotImplementationException("Unidade de persistência não está definida.");
-    }
+	public enum TipoClasse {
+		CLIENTE, CONFIGURACAO, RESERVA, VAGA, VEICULO,
+	}
+
+	public static PersistenceFactory create(TipoClasse tipoClasse) {
+		switch (tipoClasse) {
+		case CLIENTE:
+			return new PersistenciaClienteFactory();
+		case CONFIGURACAO:
+			return new PersistenciaConfiguracaoFactory();
+		case RESERVA:
+			return new PersistenciaReservaFactory();
+		case VAGA:
+			return new PersistenciaVagaFactory();
+		case VEICULO:
+			return new PersistenciaVeiculoFactory();
+		}
+		return null;
+	}
+
+	public abstract <T extends Entidade> Persistence<T> open(Persistencia persistencia)
+			throws IOException, ValidatePropertyException;
 }
