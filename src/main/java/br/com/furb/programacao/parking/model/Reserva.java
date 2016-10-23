@@ -41,11 +41,11 @@ public class Reserva extends Entidade{
     public Reserva() {
     }
 
-    public Reserva(String ID, Ativo ativo) {
+    public Reserva(Integer ID, Ativo ativo) {
         super(ID, ativo);
     }
 
-    public Reserva(Cliente cliente, Vaga vaga, Veiculo veiculo, Placa placa, String cor, String observacao, Situacao situacao, Date horarioinicio, Date horariofinal, Date dataEntrada, Date dateSaida, Double valorHora, Double totalhoras, Double totalReserva, String ID, Ativo ativo) throws ValidatePropertyException {
+    public Reserva(Cliente cliente, Vaga vaga, Veiculo veiculo, Placa placa, String cor, String observacao, Situacao situacao, Date horarioinicio, Date horariofinal, Date dataEntrada, Date dateSaida, Double valorHora, Double totalhoras, Double totalReserva, Integer ID, Ativo ativo) throws ValidatePropertyException {
         super(ID, ativo);
         setCliente(cliente);
         setVaga(vaga);

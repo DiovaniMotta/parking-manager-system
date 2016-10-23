@@ -27,7 +27,7 @@ public class Veiculo extends Entidade {
 	public Veiculo() {
 	}
 
-	public Veiculo(String ID, Ativo ativo) {
+	public Veiculo(Integer ID, Ativo ativo) {
 		super(ID, ativo);
 	}
 

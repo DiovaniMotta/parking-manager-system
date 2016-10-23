@@ -7,7 +7,6 @@ package br.com.furb.programacao.parking.model;
 
 import br.com.furb.programacao.parking.exceptions.ValidatePropertyException;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
-import java.util.Objects;
 
 /**
  *
@@ -26,7 +25,7 @@ public class Vaga extends Entidade {
 	public Vaga() {
 	}
 
-	public Vaga(String ID, Ativo ativo) {
+	public Vaga(Integer ID, Ativo ativo) {
 		super(ID, ativo);
 	}
 
@@ -66,34 +65,26 @@ public class Vaga extends Entidade {
 
 	@Override
 	public int hashCode() {
-		int hash = 5;
-		hash = 23 * hash + Objects.hashCode(this.codigo);
-		hash = 23 * hash + Objects.hashCode(this.numeroVaga);
-		hash = 23 * hash + Objects.hashCode(this.referencia);
-		return hash;
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((ID == null) ? 0 : ID.hashCode());
+		return result;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) {
+		if (this == obj)
 			return true;
-		}
-		if (obj == null) {
+		if (!super.equals(obj))
 			return false;
-		}
-		if (getClass() != obj.getClass()) {
+		if (getClass() != obj.getClass())
 			return false;
-		}
-		final Vaga other = (Vaga) obj;
-		if (!Objects.equals(this.referencia, other.referencia)) {
+		Vaga other = (Vaga) obj;
+		if (ID == null) {
+			if (other.ID != null)
+				return false;
+		} else if (!ID.equals(other.ID))
 			return false;
-		}
-		if (!Objects.equals(this.codigo, other.codigo)) {
-			return false;
-		}
-		if (!Objects.equals(this.numeroVaga, other.numeroVaga)) {
-			return false;
-		}
 		return true;
 	}
 

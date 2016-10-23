@@ -4,4 +4,5 @@ import br.com.furb.programacao.parking.model.Entidade;
 
 public abstract class GenericDAO <T extends Entidade> implements Persistence<T> {
 
+	
 }

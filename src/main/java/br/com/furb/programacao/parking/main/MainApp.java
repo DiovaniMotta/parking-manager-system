@@ -5,11 +5,14 @@
  */
 package br.com.furb.programacao.parking.main;
 
-import br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.ClienteAbstractFactory;
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.furb.programacao.parking.dao.generator.PersistenceSession;
+import br.com.furb.programacao.parking.dao.generator.PersistenceSessionSequenceVaga;
 import br.com.furb.programacao.parking.exceptions.NotImplementationException;
-import br.com.furb.programacao.parking.model.Cliente;
+import br.com.furb.programacao.parking.model.Vaga;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
-import br.com.furb.programacao.parking.model.enumerator.TipoCliente;
 
 /**
  *
@@ -19,9 +22,24 @@ public class MainApp {
 
 	public static void main(String[] args) throws NotImplementationException {
 		try {
-			ClienteAbstractFactory abstractFactory = ClienteAbstractFactory.create(TipoCliente.FISICO);
-			Cliente cliente = abstractFactory.getCliente("Diovani Bernardi da Motta", "Rua X","110110100101","919191991","1111","1",Ativo.SIM);
-			System.out.println(cliente.toString());
+			PersistenceSession<Vaga> persistenceSession = new PersistenceSessionSequenceVaga();
+			List<Vaga> vagas = new ArrayList<Vaga>();
+			for (int x = 1; x <= 100; x++) {
+				Vaga vaga = new Vaga(x, x, "vaga " + x);
+				vaga.setID(x);
+				vaga.setAtivo(Ativo.SIM);
+				vagas.add(vaga);
+			}
+			for (Vaga vaga : vagas)
+				persistenceSession.save(vaga);
+			Vaga vaga = new Vaga(50, 50, "DIOVANI BERNARDI DA MOTTA");
+			vaga.setID(50);
+			vaga.setAtivo(Ativo.SIM);
+			persistenceSession.merge(vaga);
+			Vaga v = new Vaga(59,59, "vaga " + 59);
+			v.setID(59);
+			v.setAtivo(Ativo.SIM);
+			persistenceSession.remove(v);
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}

@@ -26,11 +26,11 @@ public class ClienteJuridico extends Cliente{
     public ClienteJuridico() {
     }
 
-    public ClienteJuridico(String ID, Ativo ativo) {
+    public ClienteJuridico(Integer ID, Ativo ativo) {
         super(ID, ativo);
     }
 
-    public ClienteJuridico(String nome, String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, String ID, Ativo ativo) throws ValidatePropertyException {
+    public ClienteJuridico(String nome, String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, Integer ID, Ativo ativo) throws ValidatePropertyException {
         super(nome, endereco, cnh, telefone, celular, reservas, ID, ativo);
     }
     

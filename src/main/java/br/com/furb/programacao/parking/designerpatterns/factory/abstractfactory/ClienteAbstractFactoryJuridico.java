@@ -18,7 +18,7 @@ import br.com.furb.programacao.parking.model.enumerator.Ativo;
 public class ClienteAbstractFactoryJuridico extends ClienteAbstractFactory {
 
 	@Override
-	public Cliente getCliente(String nome, String endereco, String cnh, String telefone, String celular, String ID,
+	public Cliente getCliente(String nome, String endereco, String cnh, String telefone, String celular, Integer ID,
 			Ativo ativo) {
 		try {
 			return new ClienteJuridico(nome, endereco, cnh, telefone, celular, new ArrayList<>(), ID, ativo);

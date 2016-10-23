@@ -16,10 +16,6 @@ import br.com.furb.programacao.parking.model.enumerator.TipoCliente;
  */
 public abstract class ClienteAbstractFactory {
 
-	///public static TipoCliente  tipoCliente;
-	
-	
-	
     public static ClienteAbstractFactory create(TipoCliente tipoCliente) throws NotImplementationException{
         switch(tipoCliente){
             case FISICO:
@@ -31,6 +27,6 @@ public abstract class ClienteAbstractFactory {
     }
     
     
-    public abstract Cliente getCliente(String nome,String endereco, String cnh, String telefone, String celular,String ID, Ativo ativo);
+    public abstract Cliente getCliente(String nome,String endereco, String cnh, String telefone, String celular,Integer ID, Ativo ativo);
    
 }

@@ -25,11 +25,11 @@ public class ClienteFisico extends Cliente{
     public ClienteFisico() {
     }
 
-    public ClienteFisico(String ID, Ativo ativo) {
+    public ClienteFisico(Integer ID, Ativo ativo) {
         super(ID, ativo);
     }
 
-    public ClienteFisico(String nome, String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, String ID, Ativo ativo) throws ValidatePropertyException {
+    public ClienteFisico(String nome, String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, Integer ID, Ativo ativo) throws ValidatePropertyException {
         super(nome, endereco, cnh, telefone, celular, reservas, ID, ativo);
     }
 

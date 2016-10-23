@@ -30,11 +30,11 @@ public abstract class Cliente extends Entidade{
     public Cliente() {
     }
 
-    public Cliente(String ID, Ativo ativo) {
+    public Cliente(Integer ID, Ativo ativo) {
         super(ID, ativo);
     }
 
-    public Cliente(String nome,String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, String ID, Ativo ativo) throws ValidatePropertyException {
+    public Cliente(String nome,String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, Integer ID, Ativo ativo) throws ValidatePropertyException {
         super(ID, ativo);
         setNome(nome);
         setEndereco(endereco);

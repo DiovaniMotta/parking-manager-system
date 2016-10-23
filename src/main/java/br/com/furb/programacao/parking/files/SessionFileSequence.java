@@ -1,24 +1,16 @@
 package br.com.furb.programacao.parking.files;
 
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class SessionFileSequence extends SessionFile {
 
 	@Override
-	public void write(String file) {
-		
-	}
-
-	@Override
-	public void write(String file, boolean append) {
-		
-	}
-
-	@Override
-	public StringBuilder readAll() {
-		return null;
-	}
-
-	@Override
-	public String readByConst(String locate) {
-		return null;
+	public void writeAll(String file) throws IOException {
+		DataOutputStream dos = new DataOutputStream(new FileOutputStream(toAbsolutePath()));
+		dos.writeBytes(file);
+		dos.flush();
+		dos.close();
 	}
 }
