@@ -5,14 +5,21 @@
  */
 package br.com.furb.programacao.parking.main;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.furb.programacao.parking.dao.generator.PersistenceSession;
-import br.com.furb.programacao.parking.dao.generator.PersistenceSessionSequenceVaga;
+import br.com.furb.programacao.parking.dao.Persistence;
 import br.com.furb.programacao.parking.exceptions.NotImplementationException;
+import br.com.furb.programacao.parking.factory.PersistenceFactory;
+import br.com.furb.programacao.parking.factory.PersistenceFactory.TypePersistence;
+import br.com.furb.programacao.parking.files.FileUtils;
 import br.com.furb.programacao.parking.model.Vaga;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
+import br.com.furb.programacao.parking.model.enumerator.Persistencia;
 
 /**
  *
@@ -22,24 +29,19 @@ public class MainApp {
 
 	public static void main(String[] args) throws NotImplementationException {
 		try {
-			PersistenceSession<Vaga> persistenceSession = new PersistenceSessionSequenceVaga();
-			List<Vaga> vagas = new ArrayList<Vaga>();
-			for (int x = 1; x <= 100; x++) {
-				Vaga vaga = new Vaga(x, x, "vaga " + x);
-				vaga.setID(x);
-				vaga.setAtivo(Ativo.SIM);
-				vagas.add(vaga);
-			}
-			for (Vaga vaga : vagas)
-				persistenceSession.save(vaga);
-			Vaga vaga = new Vaga(50, 50, "DIOVANI BERNARDI DA MOTTA");
-			vaga.setID(50);
-			vaga.setAtivo(Ativo.SIM);
-			persistenceSession.merge(vaga);
-			Vaga v = new Vaga(59,59, "vaga " + 59);
-			v.setID(59);
-			v.setAtivo(Ativo.SIM);
-			persistenceSession.remove(v);
+			Persistence<Vaga> p = (Persistence<Vaga>) PersistenceFactory.getFactory(TypePersistence.VAGA)
+					.openSessionFactory(Persistencia.BINARIO);
+			Vaga v = new Vaga(1, Ativo.SIM);
+			v.setCodigo(1);
+			v.setNumeroVaga(1);
+			v.setReferencia("AAAAAAA");
+			Vaga v1 = new Vaga(2, Ativo.SIM);
+			v1.setCodigo(2);
+			v1.setNumeroVaga(2);
+			v1.setReferencia("AAAAAAA");
+			p.save(v1);
+			p.save(v);
+			System.out.println(p.findAll().toString());
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}

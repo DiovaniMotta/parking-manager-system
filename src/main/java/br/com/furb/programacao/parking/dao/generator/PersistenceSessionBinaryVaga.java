@@ -20,7 +20,7 @@ public class PersistenceSessionBinaryVaga implements PersistenceSession<Vaga> {
 
 	
 	public PersistenceSessionBinaryVaga() throws IOException, ValidatePropertyException {
-		sessionFile = SessionAbstractFactory.create(Persistencia.TEXTO).getSession();
+		sessionFile = SessionAbstractFactory.create(Persistencia.BINARIO).getSession();
 		sessionFile.createRootDirectory("binary");
 		sessionFile.createFile("vagas.bin");
 	}

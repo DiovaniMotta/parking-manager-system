@@ -20,7 +20,7 @@ public class PersistenceSessionBinaryReserva implements PersistenceSession<Reser
 	private SessionFile sessionFile;
 	
 	public PersistenceSessionBinaryReserva() throws IOException, ValidatePropertyException {
-		sessionFile = SessionAbstractFactory.create(Persistencia.TEXTO).getSession();
+		sessionFile = SessionAbstractFactory.create(Persistencia.BINARIO).getSession();
 		sessionFile.createRootDirectory("binary");
 		sessionFile.createFile("reserva.bin");
 	}

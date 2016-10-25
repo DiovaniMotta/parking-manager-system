@@ -8,6 +8,7 @@ package br.com.furb.programacao.parking.factory;
 import br.com.furb.programacao.parking.dao.Persistence;
 import br.com.furb.programacao.parking.exceptions.NotImplementationException;
 import br.com.furb.programacao.parking.model.Entidade;
+import br.com.furb.programacao.parking.model.enumerator.Persistencia;
 
 /**
  *
@@ -37,5 +38,5 @@ public abstract class PersistenceFactory {
         }
     }
 
-    public abstract Persistence<? extends Entidade> openSessionFactory();
+    public abstract Persistence<? extends Entidade> openSessionFactory(Persistencia persistencia);
 }

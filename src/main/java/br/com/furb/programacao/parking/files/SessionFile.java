@@ -34,9 +34,5 @@ public abstract class SessionFile {
 	public abstract void writeAll(String file) throws IOException;
 
 
-	public StringBuilder readAll() throws IOException {
-		Path path = Paths.get(toAbsolutePath());
-		String dados = new String(Files.readAllBytes(path));
-		return new StringBuilder(dados);
-	}
+	public abstract StringBuilder readAll() throws IOException;
 }

@@ -19,7 +19,7 @@ public class PersistenceSessionBinaryVeiculo implements PersistenceSession<Veicu
 	private SessionFile sessionFile;
 	
 	public PersistenceSessionBinaryVeiculo() throws IOException, ValidatePropertyException {
-		sessionFile = SessionAbstractFactory.create(Persistencia.TEXTO).getSession();
+		sessionFile = SessionAbstractFactory.create(Persistencia.BINARIO).getSession();
 		sessionFile.createRootDirectory("binary");
 		sessionFile.createFile("veiculo.bin");
 	}

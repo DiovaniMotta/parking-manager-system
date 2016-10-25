@@ -8,6 +8,7 @@ package br.com.furb.programacao.parking.factory;
 import br.com.furb.programacao.parking.dao.Persistence;
 import br.com.furb.programacao.parking.dao.ReservaDAO;
 import br.com.furb.programacao.parking.model.Entidade;
+import br.com.furb.programacao.parking.model.enumerator.Persistencia;
 
 /**
  *
@@ -16,7 +17,7 @@ import br.com.furb.programacao.parking.model.Entidade;
 public class ReservaFactory extends PersistenceFactory{
 
     @Override
-    public Persistence<? extends Entidade> openSessionFactory() {
-        return new ReservaDAO();
+    public Persistence<? extends Entidade> openSessionFactory(Persistencia persistencia) {
+        return new ReservaDAO(persistencia);
     }
 }
