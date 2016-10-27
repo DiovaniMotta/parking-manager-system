@@ -12,7 +12,6 @@ import br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.
 import br.com.furb.programacao.parking.exceptions.ValidatePropertyException;
 import br.com.furb.programacao.parking.files.SessionFile;
 import br.com.furb.programacao.parking.model.Reserva;
-import br.com.furb.programacao.parking.model.Veiculo;
 import br.com.furb.programacao.parking.model.enumerator.Persistencia;
 
 public class PersistenceSessionSequenceReserva implements PersistenceSession<Reserva> {
@@ -74,7 +73,7 @@ public class PersistenceSessionSequenceReserva implements PersistenceSession<Res
 	public List<Reserva> findAll() throws IOException {
 		StringBuilder json = sessionFile.readAll();
 		Gson gson = new Gson();
-		Reserva[] reservas = gson.fromJson(json.toString(), Veiculo[].class);
+		Reserva[] reservas = gson.fromJson(json.toString(), Reserva[].class);
 	    if(reservas == null)
 	    	return new ArrayList<Reserva>();
 	    List<Reserva> v = new ArrayList<>();

@@ -1,5 +1,6 @@
 package br.com.furb.programacao.parking.files;
 
+import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -24,15 +25,21 @@ public class SessionFileBinary extends SessionFile {
 	@Override
 	@SuppressWarnings("unchecked")
 	public StringBuilder readAll() throws IOException {
-		ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(toAbsolutePath()));
+		FileInputStream fileInputStream = new FileInputStream(toAbsolutePath());
+		ObjectInputStream inputStream = null;
 		try {
+			inputStream = new ObjectInputStream(fileInputStream);
 			List<Object> objects = (List<Object>) inputStream.readObject();
 			String json = new Gson().toJson(objects);
 			return new StringBuilder(json);
+		} catch (EOFException exception) {
+			return new StringBuilder();
 		} catch (Exception exception) {
 			exception.printStackTrace();
 			return new StringBuilder();
 		} finally {
+			if(inputStream == null)
+				return new StringBuilder();
 			inputStream.close();
 		}
 	}
