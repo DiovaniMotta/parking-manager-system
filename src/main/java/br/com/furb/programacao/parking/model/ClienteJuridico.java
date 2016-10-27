@@ -5,6 +5,7 @@
  */
 package br.com.furb.programacao.parking.model;
 
+import br.com.furb.programacao.parking.exceptions.ValidatePropertyException;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
 import java.util.List;
 import java.util.Objects;
@@ -16,16 +17,20 @@ import java.util.Objects;
 public class ClienteJuridico extends Cliente{
 
  
-    private String cnpj;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 648362989506747872L;
+	private String cnpj;
 
     public ClienteJuridico() {
     }
 
-    public ClienteJuridico(String ID, Ativo ativo) {
+    public ClienteJuridico(Integer ID, Ativo ativo) {
         super(ID, ativo);
     }
 
-    public ClienteJuridico(String nome, String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, String ID, Ativo ativo) {
+    public ClienteJuridico(String nome, String endereco, String cnh, String telefone, String celular, List<Reserva> reservas, Integer ID, Ativo ativo) throws ValidatePropertyException {
         super(nome, endereco, cnh, telefone, celular, reservas, ID, ativo);
     }
     

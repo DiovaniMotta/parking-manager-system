@@ -5,6 +5,7 @@
  */
 package br.com.furb.programacao.parking.model;
 
+import br.com.furb.programacao.parking.exceptions.ValidatePropertyException;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
 import java.util.Objects;
 
@@ -12,98 +13,109 @@ import java.util.Objects;
  *
  * @author Diovani
  */
-public class Veiculo extends Entidade{
-    
-    private Integer codigo;
-    private String descricao;
-    private String marcar;
-    private String modelo;
+public class Veiculo extends Entidade {
 
-    public Veiculo() {
-    }
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6924404662807929201L;
+	private Integer codigo;
+	private String descricao;
+	private String marcar;
+	private String modelo;
 
-    public Veiculo(String ID, Ativo ativo) {
-        super(ID, ativo);
-    }
+	public Veiculo() {
+	}
 
-    public Veiculo(Integer codigo, String descricao, String marcar, String modelo) {
-        this.codigo = codigo;
-        this.descricao = descricao;
-        this.marcar = marcar;
-        this.modelo = modelo;
-    }
+	public Veiculo(Integer ID, Ativo ativo) {
+		super(ID, ativo);
+	}
 
-    public Integer getCodigo() {
-        return codigo;
-    }
+	public Veiculo(Integer codigo, String descricao, String marcar, String modelo) throws ValidatePropertyException {
+		setCodigo(codigo);
+		setDescricao(descricao);
+		setMarcar(marcar);
+		setModelo(modelo);
+	}
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
-    }
+	public Integer getCodigo() {
+		return codigo;
+	}
 
-    public String getDescricao() {
-        return descricao;
-    }
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
+	public String getDescricao() {
+		return descricao;
+	}
 
-    public String getMarcar() {
-        return marcar;
-    }
+	public void setDescricao(String descricao) throws ValidatePropertyException {
+		if (descricao == null || descricao.isEmpty())
+			throw new ValidatePropertyException("A descrição deve ser informada");
+		this.descricao = descricao;
+	}
 
-    public void setMarcar(String marcar) {
-        this.marcar = marcar;
-    }
+	public String getMarcar() {
+		return marcar;
+	}
 
-    public String getModelo() {
-        return modelo;
-    }
+	public void setMarcar(String marcar) throws ValidatePropertyException {
+		if (marcar == null || marcar.isEmpty())
+			throw new ValidatePropertyException("A marca deve ser informada");
+		this.marcar = marcar;
+	}
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
+	public String getModelo() {
+		return modelo;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 97 * hash + Objects.hashCode(this.codigo);
-        hash = 97 * hash + Objects.hashCode(this.descricao);
-        hash = 97 * hash + Objects.hashCode(this.marcar);
-        hash = 97 * hash + Objects.hashCode(this.modelo);
-        return hash;
-    }
+	public void setModelo(String modelo) throws ValidatePropertyException {
+		if (modelo == null || modelo.isEmpty())
+			throw new ValidatePropertyException("O modelo deve ser informada");
+		this.modelo = modelo;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Veiculo other = (Veiculo) obj;
-        if (!Objects.equals(this.descricao, other.descricao)) {
-            return false;
-        }
-        if (!Objects.equals(this.marcar, other.marcar)) {
-            return false;
-        }
-        if (!Objects.equals(this.modelo, other.modelo)) {
-            return false;
-        }
-        if (!Objects.equals(this.codigo, other.codigo)) {
-            return false;
-        }
-        return true;
-    }
+	@Override
+	public int hashCode() {
+		int hash = 3;
+		hash = 97 * hash + Objects.hashCode(this.codigo);
+		hash = 97 * hash + Objects.hashCode(this.descricao);
+		hash = 97 * hash + Objects.hashCode(this.marcar);
+		hash = 97 * hash + Objects.hashCode(this.modelo);
+		return hash;
+	}
 
-    @Override
-    public String toString() {
-        return "Veiculo{" + "codigo=" + codigo + ", descricao=" + descricao + ", marcar=" + marcar + ", modelo=" + modelo + '}';
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final Veiculo other = (Veiculo) obj;
+		if (!Objects.equals(this.descricao, other.descricao)) {
+			return false;
+		}
+		if (!Objects.equals(this.marcar, other.marcar)) {
+			return false;
+		}
+		if (!Objects.equals(this.modelo, other.modelo)) {
+			return false;
+		}
+		if (!Objects.equals(this.codigo, other.codigo)) {
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Veiculo{" + "codigo=" + codigo + ", descricao=" + descricao + ", marcar=" + marcar + ", modelo="
+				+ modelo + '}';
+	}
 }

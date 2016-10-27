@@ -5,9 +5,9 @@
  */
 package br.com.furb.programacao.parking.model;
 
-import br.com.furb.programacao.parking.model.enumerator.Ativo;
 import java.io.Serializable;
-import java.util.Objects;
+
+import br.com.furb.programacao.parking.model.enumerator.Ativo;
 
 /**
  *
@@ -15,22 +15,26 @@ import java.util.Objects;
  */
 public abstract class Entidade implements Serializable{
     
-    protected String ID;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6398540556483263675L;
+	protected Integer ID;
     protected Ativo ativo;
 
     public Entidade() {
     }
 
-    public Entidade(String ID, Ativo ativo) {
-        this.ID = ID;
-        this.ativo = ativo;
+    public Entidade(Integer ID, Ativo ativo) {
+        setID(ID);
+        setAtivo(ativo);
     }
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -41,37 +45,33 @@ public abstract class Entidade implements Serializable{
     public void setAtivo(Ativo ativo) {
         this.ativo = ativo;
     }
-
+    
     @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.ID);
-        hash = 89 * hash + Objects.hashCode(this.ativo);
-        return hash;
-    }
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((ID == null) ? 0 : ID.hashCode());
+		return result;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Entidade other = (Entidade) obj;
-        if (!Objects.equals(this.ID, other.ID)) {
-            return false;
-        }
-        if (this.ativo != other.ativo) {
-            return false;
-        }
-        return true;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Entidade other = (Entidade) obj;
+		if (ID == null) {
+			if (other.ID != null)
+				return false;
+		} else if (!ID.equals(other.ID))
+			return false;
+		return true;
+	}
 
-    @Override
+	@Override
     public String toString() {
         return "Entidade{" + "ID=" + ID + ", ativo=" + ativo + '}';
     }

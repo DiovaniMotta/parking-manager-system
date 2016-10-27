@@ -1,1 +1,8 @@
 documentacao/.~lock.Trabalho Programação II - Sistema de Estacionamento.odt#
+/target/
+.settings/
+.classpath
+.project
+documentacao/Thumbs.db
+binary/
+sequence/

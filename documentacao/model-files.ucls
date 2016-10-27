@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.11" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="br.com.furb.programacao.parking.designerpatterns.PersistenciaReservaFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/PersistenciaReservaFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="221" x="3512" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.PersistenceBinaryFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/PersistenceBinaryFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="322" x="1377" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="br.com.furb.programacao.parking.dao.GenericDAO" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/GenericDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="167" x="2167" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.SessionAbstractFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/SessionAbstractFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="322" x="2969" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="br.com.furb.programacao.parking.exceptions.NotImplementationException" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/exceptions/NotImplementationException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="332" x="88" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="br.com.furb.programacao.parking.model.placas.Placa" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/placas/Placa.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="207" x="3217" y="1755"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <enumeration id="7" language="java" name="br.com.furb.programacao.parking.model.enumerator.Ativo" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/enumerator/Ativo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="227" x="6818" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <interface id="8" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSession" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSession.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="209" x="5317" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="9" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.ClienteAbstractFactoryJuridico" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/ClienteAbstractFactoryJuridico.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="331" x="7333" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="br.com.furb.programacao.parking.model.ClienteJuridico" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/ClienteJuridico.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="391" x="5923" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="br.com.furb.programacao.parking.dao.ClienteDAO" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/ClienteDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1665" y="55"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionBinaryCliente" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionBinaryCliente.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="214" x="4034" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="br.com.furb.programacao.parking.designerpatterns.PersistenciaClienteFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/PersistenciaClienteFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="221" x="3773" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionBinaryVeiculo" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionBinaryVeiculo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="216" x="5359" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="br.com.furb.programacao.parking.designerpatterns.PersistenciaVagaFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/PersistenciaVagaFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="221" x="4034" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="br.com.furb.programacao.parking.main.MainApp" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/main/MainApp.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="143" y="232"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="br.com.furb.programacao.parking.model.Reserva" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/Reserva.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="855" width="580" x="5303" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="br.com.furb.programacao.parking.designerpatterns.PersistenceFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/PersistenceFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="221" x="3773" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="br.com.furb.programacao.parking.model.Configuracao" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/Configuracao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="198" x="7085" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionSequenceReserva" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionSequenceReserva.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="243" x="4288" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="br.com.furb.programacao.parking.model.Vaga" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/Vaga.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="351" width="177" x="6778" y="1755"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.ClienteAbstractFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/ClienteAbstractFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="342" x="7519" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="br.com.furb.programacao.parking.model.ClienteFisico" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/ClienteFisico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="382" x="6354" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionSequenceVaga" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionSequenceVaga.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="224" x="5095" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="br.com.furb.programacao.parking.dao.VagaDAO" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/VagaDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="167" x="1739" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="br.com.furb.programacao.parking.factory.VeiculoFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/factory/VeiculoFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="357" x="8637" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="br.com.furb.programacao.parking.designerpatterns.PersistenciaVeiculoFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/PersistenciaVeiculoFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="221" x="4295" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="br.com.furb.programacao.parking.files.FileUtils" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/files/FileUtils.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="341" y="247"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="br.com.furb.programacao.parking.files.SessionFile" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/files/SessionFile.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="182" x="5095" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="br.com.furb.programacao.parking.dao.ConfiguracaoDAO" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/ConfiguracaoDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="181" x="1946" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="31" language="java" name="br.com.furb.programacao.parking.factory.PersistenceFactory.TypePersistence" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/factory/PersistenceFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="183" x="9034" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="32" language="java" name="br.com.furb.programacao.parking.files.SessionFileBinary" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/files/SessionFileBinary.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="170" x="4883" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.SessionAbstractFactoryBinary" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/SessionAbstractFactoryBinary.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="322" x="2788" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="br.com.furb.programacao.parking.factory.ReservaFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/factory/ReservaFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="357" x="9257" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="br.com.furb.programacao.parking.dao.VeiculoDAO" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/VeiculoDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="167" x="2167" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" 
+    name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionBinaryConfiguracao" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionBinaryConfiguracao.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="251" x="6466" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="37" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.PersistenceFactory.TipoClasse" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/PersistenceFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="221" x="4556" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="38" language="java" name="br.com.furb.programacao.parking.model.Veiculo" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/Veiculo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="405" width="194" x="6544" y="1755"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="br.com.furb.programacao.parking.factory.ClienteFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/factory/ClienteFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="357" x="9654" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="br.com.furb.programacao.parking.dao.ReservaDAO" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/ReservaDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="167" x="2374" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.ClienteAbstractFactoryFisico" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/ClienteAbstractFactoryFisico.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="331" x="7704" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionSequenceCliente" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionSequenceCliente.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="235" x="4820" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="br.com.furb.programacao.parking.exceptions.ValidatePropertyException" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/exceptions/ValidatePropertyException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="246" y="417"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="44" language="java" name="br.com.furb.programacao.parking.designerpatterns.factory.ClienteCreate" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/ClienteCreate.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="345" x="8208" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="45" language="java" name="br.com.furb.programacao.parking.dao.Persistence" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/Persistence.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="167" x="2581" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="46" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionBinaryVaga" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionBinaryVaga.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="209" x="4571" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionSequenceVeiculo" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionSequenceVeiculo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="237" x="5615" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="br.com.furb.programacao.parking.designerpatterns.PersistenciaConfiguracaoFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/PersistenciaConfiguracaoFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="221" x="4817" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.PersistenceSequenceFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/PersistenceSequenceFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="322" x="1739" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.SessionAbstractFactorySequence" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/SessionAbstractFactorySequence.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="322" x="3150" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="51" language="java" name="br.com.furb.programacao.parking.model.enumerator.Persistencia" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/enumerator/Persistencia.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="568" y="48"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="52" language="java" name="br.com.furb.programacao.parking.exceptions.BadFormatException" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/exceptions/BadFormatException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="601" y="209"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="br.com.furb.programacao.parking.files.SessionFileSequence" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/files/SessionFileSequence.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="170" x="5093" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="br.com.furb.programacao.parking.model.Entidade" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/Entidade.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="177" x="6757" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="55" language="java" name="br.com.furb.programacao.parking.model.enumerator.TipoCliente" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/enumerator/TipoCliente.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="227" x="8075" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="56" language="java" name="br.com.furb.programacao.parking.designerpatterns.factory.ClienteFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/ClienteFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="255" x="8342" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="57" language="java" name="br.com.furb.programacao.parking.exceptions.EmptyException" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/exceptions/EmptyException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="586" y="402"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="58" language="java" name="br.com.furb.programacao.parking.model.Cliente" project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/Cliente.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="531" width="354" x="5923" y="289"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="59" language="java" name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionBinaryReserva" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionBinaryReserva.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="222" x="6204" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="60" language="java" 
+    name="br.com.furb.programacao.parking.designerpatterns.factory.abstractfactory.PersistenceAbstractFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/designerpatterns/factory/abstractfactory/PersistenceAbstractFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1518" y="315"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="61" language="java" name="br.com.furb.programacao.parking.factory.PersistenceFactory" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/factory/PersistenceFactory.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="365" x="9145" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="62" language="java" name="br.com.furb.programacao.parking.model.placas.PlacaVeiculo" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/placas/PlacaVeiculo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="207" x="1130" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="63" language="java" 
+    name="br.com.furb.programacao.parking.dao.generator.PersistenceSessionSequenceConfiguracao" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/dao/generator/PersistenceSessionSequenceConfiguracao.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="272" x="5892" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="64" language="java" name="br.com.furb.programacao.parking.model.enumerator.Situacao" 
+    project="parking-manager-system" 
+    file="/parking-manager-system/src/main/java/br/com/furb/programacao/parking/model/enumerator/Situacao.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="227" x="5303" y="1755"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <realization id="65">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="45"/>  
+  </realization>  
+  <realization id="66">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <generalization id="67">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="68">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="69" name="vaga"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="71">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <association id="72">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="73" name="sessionFile"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="75">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="76" name="sessionFile"/>      
+      <multiplicity id="77" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="78">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="79" name="CONFIGURACAO"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="81">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="82">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="83" name="sessionFile"/>      
+      <multiplicity id="84" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="85">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <association id="86">    
+    <end type="SOURCE" refId="58" navigable="false">      
+      <attribute id="87" name="reservas"/>      
+      <multiplicity id="88" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="89">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <generalization id="90">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <generalization id="91">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="92">    
+    <bendpoint x="6766" y="860"/>    
+    <bendpoint x="6766" y="289"/>    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="54"/>  
+  </generalization>  
+  <generalization id="93">    
+    <bendpoint x="5892" y="289"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="54"/>  
+  </generalization>  
+  <generalization id="94">    
+    <bendpoint x="6787" y="860"/>    
+    <bendpoint x="6787" y="289"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="54"/>  
+  </generalization>  
+  <nesting id="95">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="37"/>  
+  </nesting>  
+  <association id="96">    
+    <end type="SOURCE" refId="63" navigable="false">      
+      <attribute id="97" name="sessionFile"/>      
+      <multiplicity id="98" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="99">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="100">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="101" name="tipoCliente"/>      
+      <multiplicity id="102" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="55" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="103">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="104" name="sessionFile"/>      
+      <multiplicity id="105" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="61"/>  
+  </generalization>  
+  <association id="107">    
+    <end type="SOURCE" refId="46" navigable="false">      
+      <attribute id="108" name="sessionFile"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="110">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="111" name="situacao"/>      
+      <multiplicity id="112" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="64" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="113">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="114">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="115">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="116">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <realization id="117">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <generalization id="118">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="119">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="61"/>  
+  </generalization>  
+  <generalization id="120">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <realization id="121">    
+    <end type="SOURCE" refId="59"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <realization id="122">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <realization id="123">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <generalization id="124">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="125">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="126" name="sessionFile"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="128">    
+    <end type="SOURCE" refId="63"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="129">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="130" name="placa"/>      
+      <multiplicity id="131" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="132">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="54"/>  
+  </generalization>  
+  <generalization id="133">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <generalization id="134">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="135">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="61"/>  
+  </generalization>  
+  <association id="136">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="137" name="cliente"/>      
+      <multiplicity id="138" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="58" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="139">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <generalization id="140">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="58"/>  
+  </generalization>  
+  <association id="141">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="142" name="persistenceAbstractFactory"/>      
+      <multiplicity id="143" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="60" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="144">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <generalization id="145">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <generalization id="146">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="58"/>  
+  </generalization>  
+  <nesting id="147">    
+    <end type="SOURCE" refId="61"/>    
+    <end type="TARGET" refId="31"/>  
+  </nesting>  
+  <generalization id="148">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="44"/>  
+  </generalization>  
+  <generalization id="149">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="54"/>  
+  </generalization>  
+  <generalization id="150">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <realization id="151">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="152">    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="153" name="ativo"/>      
+      <multiplicity id="154" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="155">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="156">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="157" name="veiculo"/>      
+      <multiplicity id="158" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="159">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="160" name="sessionFile"/>      
+      <multiplicity id="161" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="162">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="163" name="sessionFile"/>      
+      <multiplicity id="164" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="165">    
+    <end type="SOURCE" refId="59" navigable="false">      
+      <attribute id="166" name="sessionFile"/>      
+      <multiplicity id="167" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

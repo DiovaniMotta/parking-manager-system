@@ -5,91 +5,91 @@
  */
 package br.com.furb.programacao.parking.model;
 
+import br.com.furb.programacao.parking.exceptions.ValidatePropertyException;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
-import java.util.Objects;
 
 /**
  *
  * @author Diovani
  */
-public class Vaga extends Entidade{
-    
-    private Integer codigo;
-    private Integer numeroVaga;
-    private String referencia;
+public class Vaga extends Entidade {
 
-    public Vaga() {
-    }
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2474249896156859055L;
+	private Integer codigo;
+	private Integer numeroVaga;
+	private String referencia;
 
-    public Vaga(String ID, Ativo ativo) {
-        super(ID, ativo);
-    }
+	public Vaga() {
+	}
 
-    public Vaga(Integer codigo, Integer numeroVaga, String referencia) {
-        this.codigo = codigo;
-        this.numeroVaga = numeroVaga;
-        this.referencia = referencia;
-    }
+	public Vaga(Integer ID, Ativo ativo) {
+		super(ID, ativo);
+	}
 
-    public Integer getCodigo() {
-        return codigo;
-    }
+	public Vaga(Integer codigo, Integer numeroVaga, String referencia) throws ValidatePropertyException {
+		setCodigo(codigo);
+		setNumeroVaga(numeroVaga);
+		setReferencia(referencia);
+	}
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
-    }
+	public Integer getCodigo() {
+		return codigo;
+	}
 
-    public Integer getNumeroVaga() {
-        return numeroVaga;
-    }
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
 
-    public void setNumeroVaga(Integer numeroVaga) {
-        this.numeroVaga = numeroVaga;
-    }
+	public Integer getNumeroVaga() {
+		return numeroVaga;
+	}
 
-    public String getReferencia() {
-        return referencia;
-    }
+	public void setNumeroVaga(Integer numeroVaga) throws ValidatePropertyException {
+		if (numeroVaga == null || numeroVaga == 0)
+			throw new ValidatePropertyException("O número da vaga deve ser informado");
+		this.numeroVaga = numeroVaga;
+	}
 
-    public void setReferencia(String referencia) {
-        this.referencia = referencia;
-    }
+	public String getReferencia() {
+		return referencia;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 23 * hash + Objects.hashCode(this.codigo);
-        hash = 23 * hash + Objects.hashCode(this.numeroVaga);
-        hash = 23 * hash + Objects.hashCode(this.referencia);
-        return hash;
-    }
+	public void setReferencia(String referencia) throws ValidatePropertyException {
+		if (referencia == null || referencia.isEmpty())
+			throw new ValidatePropertyException("A referência deve ser informado");
+		this.referencia = referencia;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Vaga other = (Vaga) obj;
-        if (!Objects.equals(this.referencia, other.referencia)) {
-            return false;
-        }
-        if (!Objects.equals(this.codigo, other.codigo)) {
-            return false;
-        }
-        if (!Objects.equals(this.numeroVaga, other.numeroVaga)) {
-            return false;
-        }
-        return true;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((ID == null) ? 0 : ID.hashCode());
+		return result;
+	}
 
-    @Override
-    public String toString() {
-        return "Vaga{" + "codigo=" + codigo + ", numeroVaga=" + numeroVaga + ", referencia=" + referencia + '}';
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Vaga other = (Vaga) obj;
+		if (ID == null) {
+			if (other.ID != null)
+				return false;
+		} else if (!ID.equals(other.ID))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Vaga{" + "codigo=" + codigo + ", numeroVaga=" + numeroVaga + ", referencia=" + referencia + '}';
+	}
 }
