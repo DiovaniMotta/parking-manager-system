@@ -5,37 +5,45 @@
  */
 package br.com.furb.programacao.parking.dao;
 
+import br.com.furb.programacao.parking.exceptions.ValidatePropertyException;
 import br.com.furb.programacao.parking.model.Cliente;
+import br.com.furb.programacao.parking.model.enumerator.Persistencia;
+
+import java.io.IOException;
 import java.util.List;
 
 /**
  *
  * @author Diovani
  */
-public class ClienteDAO implements Persistence<Cliente>{
+public class ClienteDAO extends GenericDAO<Cliente> {
 
-    @Override
-    public boolean save(Cliente entidade) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	public ClienteDAO(Persistencia persistencia) {
+		super(persistencia);
+	}
 
-    @Override
-    public boolean merge(Cliente entidade) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public boolean save(Cliente entidade) throws IOException, ValidatePropertyException {
+		return persistenceAbstractFactory.getCliente().save(entidade);
+	}
 
-    @Override
-    public boolean remove(Cliente entidade) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public boolean merge(Cliente entidade) throws IOException, ValidatePropertyException {
+		return persistenceAbstractFactory.getCliente().merge(entidade);
+	}
 
-    @Override
-    public Cliente findByKey(String ID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public boolean remove(Cliente entidade) throws IOException, ValidatePropertyException {
+		return persistenceAbstractFactory.getCliente().remove(entidade);
+	}
 
-    @Override
-    public List<Cliente> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public Cliente findByKey(String ID) throws IOException, ValidatePropertyException {
+		return persistenceAbstractFactory.getCliente().findByKey(ID);
+	}
+
+	@Override
+	public List<Cliente> findAll() throws IOException, ValidatePropertyException {
+		return persistenceAbstractFactory.getCliente().findAll();
+	}
 }
