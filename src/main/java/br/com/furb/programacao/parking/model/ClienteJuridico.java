@@ -34,12 +34,10 @@ public class ClienteJuridico extends Cliente{
         super(nome, endereco, cnh, telefone, celular, reservas, ID, ativo);
     }
     
-    @Override
     public void setDocumento(String documento) {
         this.cnpj = documento;
     }
 
-    @Override
     public String getDocumento() {
         return cnpj;
     }

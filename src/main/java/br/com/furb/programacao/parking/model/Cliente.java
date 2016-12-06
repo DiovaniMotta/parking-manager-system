@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- *
+ *  
  * @author Diovani
  */
 public abstract class Cliente extends Entidade{

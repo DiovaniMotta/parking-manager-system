@@ -5,18 +5,10 @@
  */
 package br.com.furb.programacao.parking.main;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.List;
-
 import br.com.furb.programacao.parking.dao.Persistence;
 import br.com.furb.programacao.parking.exceptions.NotImplementationException;
 import br.com.furb.programacao.parking.factory.PersistenceFactory;
 import br.com.furb.programacao.parking.factory.PersistenceFactory.TypePersistence;
-import br.com.furb.programacao.parking.files.FileUtils;
 import br.com.furb.programacao.parking.model.Vaga;
 import br.com.furb.programacao.parking.model.enumerator.Ativo;
 import br.com.furb.programacao.parking.model.enumerator.Persistencia;
@@ -29,6 +21,7 @@ public class MainApp {
 
 	public static void main(String[] args) throws NotImplementationException {
 		try {
+			@SuppressWarnings("unchecked")
 			Persistence<Vaga> p = (Persistence<Vaga>) PersistenceFactory.getFactory(TypePersistence.VAGA)
 					.openSessionFactory(Persistencia.BINARIO);
 			Vaga v = new Vaga(1, Ativo.SIM);

@@ -33,12 +33,10 @@ public class ClienteFisico extends Cliente{
         super(nome, endereco, cnh, telefone, celular, reservas, ID, ativo);
     }
 
-    @Override
     public void setDocumento(String documento) {
         this.cpf = documento;
     }
 
-    @Override
     public String getDocumento() {
         return cpf;
     }
